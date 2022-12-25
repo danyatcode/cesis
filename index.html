@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="style.css">
     <title>Cesis.</title>
 </head>
-<body>
+<body onscroll="fixHeader()">
     <section class="intro">
         <header class="header">
-            <div class="header-logo">Architecture.</div>
-            <nav class="menu">
-                <ul class="navigation">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>News</li>
-                    <li>Contact</li>
-                    <li>Demos</li>
-                </ul>
-            </nav>
-            <div class="toggle-menu">
-                <span class="lines"></span>
+            <div class="header-content">
+                
+                <div class="header-logo">Architecture.</div>
+
+                    <nav class="menu">
+                        <ul class="navigation">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Services</li>
+                            <li>Projects</li>
+                            <li>News</li>
+                            <li>Contact</li>
+                            <li>Demos</li>
+                        </ul>
+                    </nav>
+
+                    <div class="toggle-menu">
+                        <span class="lines"></span>
+                    </div>
             </div>
         </header>
         <div class="container">
@@ -39,7 +44,7 @@
                             <div class="lside-description">
                                 Making beautiful and powerful easy to use theme for our awesome customers.
                             </div>
-                            <button class="lside-purchase">
+                            <button class="purchase-btn">
                                 <span>Purchase now</span> 
                                 <div>
                                     <img src="assets/images/header-icons/icons8-shopping-bag-50.png" alt="">
@@ -107,7 +112,7 @@
                              content of a page when looking at its layout, Lorem Ipsum passages.
                         </div>
                     </div>
-                    <button class="lside-purchase">
+                    <button class="purchase-btn">
                         <span>about us</span> 
                         <div>
                             <img src="assets/images/header-icons/right-arrow.png" alt="">
@@ -181,7 +186,7 @@
 
             </div><!--portfolio-grid-->
 
-            <button class="lside-purchase">
+            <button class="purchase-btn">
                 <span>purchase now</span> 
                 <div>
                     <img src="assets/images/header-icons/right-arrow.png" alt="">
@@ -310,6 +315,95 @@
 
         </div><!--container-->
     </section><!--testimonial-->
+
+
+    <section class="partners">
+        <div class="container">
+
+            <div class="partners-content">
+
+                <div class="partner">
+                    <img src="assets/images/partners/Abstract@3x.png" alt="#">
+                </div>
+
+                <div class="partner">
+                    <img src="assets/images/partners/adelfox@3x-768x358.webp" alt="#">
+                </div>
+
+                <div class="partner">
+                    <img src="assets/images/partners/Cesis@3x.png" alt="#">
+                </div>
+
+                <div class="partner">
+                    <img src="assets/images/partners/firefox@3x.png" alt="#">
+                </div>
+
+                <div class="partner">
+                    <img src="assets/images/partners/Origami@3x.png" alt="#">
+                </div>
+
+                <div class="partner">
+                    <img src="assets/images/partners/thefox@3x.png" alt="#">
+                </div>
+
+            </div><!--partners-content-->
+
+        </div><!--container-->
+    </section><!--partners-->
+
+
+    <section class="footer-navs">
+        <div class="container">
+
+            <div class="footer-navs-content">
+
+                <nav class="footer-nav">
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Projects</li>
+                        <li>News</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+        
+                <div class="socials">
+                    <div class="social-icon">
+                        <img src="assets/images/socials/fb.png" alt="#">
+                    </div>
+                    <div class="social-icon">
+                        <img src="assets/images/socials/inst.png" alt="#">
+                    </div>
+                    <div class="social-icon">
+                        <img src="assets/images/socials/pint.png" alt="#">
+                    </div>
+                    <div class="social-icon">
+                        <img src="assets/images/socials/twitter.png" alt="#">
+                    </div>
+                </div>
+
+            </div><!--footer-navs-content-->
+            
+
+        </div><!--container-->
+    </section><!--footer-navs-->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">
+                    Architecture.
+                </div>
+                <div class="footer-createdby">
+                    © Developed by @danyatcode
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
