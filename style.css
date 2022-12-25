@@ -11,7 +11,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: margin 500ms;
     position: relative;
     z-index: 0;
@@ -22,11 +22,11 @@ body.active{
 /* intro */
 .intro{
     width: 100%;
-    height: 100vh;
+    min-height: 50vh;
+    padding-bottom: 100px;
     background-image: url('assets/images/header-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 /* header */
 .header{
@@ -129,7 +129,6 @@ body.active{
     max-width: 100%;
     width: 1155px;
     margin: 0 auto;
-    
 }
 .intro-content{
     padding: 100px;
@@ -188,7 +187,6 @@ body.active{
     border-right: 1px solid var(--gray);
 
     text-transform: uppercase;
-    
     font-weight: 600;
 }
 .lside-purchase img{
@@ -200,7 +198,376 @@ body.active{
 .content-rside{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 
     color: var(--asphalt);
+
+    width: 50%;
+}
+.rside-item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+}
+
+.rside-item{
+    display: flex;
+    align-items: center;
+
+    gap: 0px 10px;
+}
+
+.rside-item img{
+    align-self: flex-start;
+}
+.rside-text-title{
+    font-size: 1em;
+    font-weight: 600;
+}
+.rside-text-descr{
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+/* about */
+
+.about{
+    background-color: #fff;
+    min-height: 50vh;
+    margin-bottom: 50px;
+}
+.about-content{
+    padding-top: 100px;
+
+    display: flex;
+}
+
+.about-lside-title{
+    font-size: 2.5em;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--asphalt);
+}
+.about-lside-descr{
+    margin: 40px 0;
+    color: var(--gray);
+    font-size: 0.9em;
+}
+.about-lside hr{
+    margin-top: 20px;
+    border: none;
+    background-color: #bedfea;
+    height: 4px;
+    width: 125px;
+}
+
+.about-lside{
+    width: 50%;
+}
+
+.about-rside{
+    width: 50%;
+}
+
+.about-rside{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    gap: 20px 0px;
+}
+
+.about-rside-suptitle{
+    color: #000;
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.about-rside-text{
+    display: flex;
+    gap: 0px 10px;
+}
+
+.about-text-col{
+    color: var(--gray);
+    font-size: 0.9em;
+    width: 50%;
+}
+
+
+.about-rside button, .portfolio button{
+    border: 2px solid var(--asphalt);
+    color: var(--asphalt);
+}
+.about-rside button span, .portfolio button span{
+    border-right: 2px solid var(--asphalt);
+}
+.about-rside button span, .about-rside button div, .portfolio button span, .portfolio button div{
+    background-color: #fff;
+    color: var(--asphalt);
+}
+.about-rside button div img, .portfolio button div img{
+    filter: invert(0);
+}
+
+/* portfolio */
+
+.portfolio{
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.portfolio .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 200px);
+    margin-bottom: 5%;
+}
+.portfolio-item{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+
+    margin: 15px;
+
+    cursor: pointer;
+}
+.portfolio-item.short{
+    grid-row: span 1;
+}
+.portfolio-item.long{
+    grid-row: span 2;
+}
+.portfolio-item-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-item-text{
+    position: relative;
+
+    padding: 20px;
+
+    color: #fff;  
+}
+
+.portfolio-text-title{
+    font-size: 1.7em;
+    font-weight: 600;  
+}
+/* service */
+.service{
+    background-image: url('assets/images/service-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+.service-content{
+    padding: 100px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px 0px;
+
+    color: #fff;
+}
+.service-content hr{
+    border: none;
+    background-color: #bedfea;
+    height: 5px;
+    width: 135px;
+}
+.service-items{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0px 20px;
+}
+.service-item{
+    width: 25%;
+}
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.service-item img{
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+.service-creators{
+    font-size: 0.9em;
+}
+.service-title{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* blog */
+.blog{
+    margin: 100px 0px;
+}
+.blog-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 0;
+    padding-bottom: 50px;
+}
+.blog-title{
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--asphalt);
+}
+.blog hr{
+    border: none;
+    height: 5px;
+    width: 135px;
+    background-color: #bedfea;
+}
+.blog-suptitle{
+    font-size: 0.9em;
+    color: var(--gray);
+}
+.blog-items{
+    display: flex;
+    gap: 0px 30px;
+}
+.blog-items img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.blog-item{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 33%;
+
+    gap: 15px 0px;
+}
+
+.blog-item-descr{
+    display: flex;
+    gap: 0px 15px;
+
+    font-size: 0.85em;
+    color: var(--gray);
+}
+.blog-descr-categ{
+    cursor: pointer;
+}
+.blog-item-title{
+    font-size: 1.2em;
+}
+
+/* testimonial */
+
+.testimonial{
+    background-image: url('assets/images/testimonial-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-size: cover;
+}
+.testimonial-content{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 0px 300px 0px;
+
+    gap: 50px 0px;
+}
+.testimonial-quote{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.testimonial-designer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.designer-name{
+    text-align: center;
+}
+.testimonial-designer img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+@media (max-width: 1200px) {
+    .container{
+        padding: 0px 20px;
+    }
+}
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 920px) {
+    .intro-content, .about-content, .about-rside, .about-rside-text, .content-rside{
+        flex-direction: column;
+        gap: 30px 0px;
+    }
+    .content-lside, .content-rside, .about-lside,  .about-rside, .about-text-col{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .service-items{
+        flex-direction: column;
+        gap: 30px 0;
+    }
+    .blog-items{
+        flex-wrap: wrap;
+    }
+    .blog-item{
+        width: 45%;
+        margin-bottom: 10px;
+    }
+    .service-item{
+        width: 200px;
+    }
+    .portfolio-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
+@media (max-width:430px) {
+    .blog-items{
+        flex-direction: column;
+        gap: 30px 0;
+    }
+    .blog-item{
+        width: 100%;
+    }
 }
