@@ -193,9 +193,12 @@ body.active{
 
     height: 55px;
 
+    border: 2px solid transparent;
+    transition: 300ms all ease;
+
     cursor: pointer;
 }
-.purchase-btn span, .purchase-btn div{
+.purchase-span, .purchase-div{
     color: #fff;
     
     background-color: var(--asphalt);
@@ -206,20 +209,43 @@ body.active{
     align-items: center;
     
 }
-.purchase-btn div{
+
+.purchase-div{
     padding: 0 35px;
+
+    transition: all 300ms ease;
 }
-.purchase-btn span{
+.purchase-span{
     border-right: 2px solid var(--gray);
 
     text-transform: uppercase;
     font-weight: 600;
+
+    transition: all 300ms ease;
 }
 .purchase-btn img{
     height: 12px;
     width: 12px;
 
+    transition: all 300ms ease;
+
     filter: invert(1);
+}
+.purchase-btn:hover{
+    border: 2px solid #15181f;
+}
+.purchase-btn:hover .purchase-span{
+    border-right: 2px solid #15181f;
+    background-color: #fff;
+    color: #15181f;
+}
+.purchase-btn:hover .purchase-div{
+    background-color: #fff;
+    color: #15181f;
+}
+
+.purchase-btn:hover .purchase-div img{
+    filter: invert(0);
 }
 .content-rside{
     display: flex;
@@ -322,26 +348,64 @@ body.active{
     width: 50%;
 }
 
+.about-btn{
+    border: none;
+    background-color: transparent;
 
-.about-rside .purchase-btn, .portfolio .purchase-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 55px;
+
     border: 2px solid var(--asphalt);
+    transition: 300ms all ease;
+
+    cursor: pointer;
+}
+.about-btn-span, .about-btn-div{
     color: var(--asphalt);
-}
-.about-rside .purchase-btn span, .portfolio .purchase-btn span{
-    border-right: 2px solid var(--asphalt);
-}
-.about-rside .purchase-btn span, .about-rside .purchase-btn div, .portfolio .purchase-btn span, .portfolio .purchase-btn div{
     background-color: #fff;
-    color: var(--asphalt);
+    padding: 0 45px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
 }
-.about-rside .purchase-btn div img, .portfolio .purchase-btn div img{
+
+.about-btn-div{
+    padding: 0 35px;
+
+    transition: all 300ms ease;
+}
+.about-btn-span{
+    border-right: 2px solid var(--gray);
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+    transition: all 300ms ease;
+}
+.about-btn-div img{
+    height: 12px;
+    width: 12px;
+
+    transition: all 300ms ease;
+
     filter: invert(0);
 }
-/* hover to buttons */
-
-.about-rside .purchase-btn:hover .about-rside .purchase-btn span{
-    background-color: #000;
+.about-btn:hover{
+    border: 2px solid transparent;
 }
+.about-btn:hover .about-btn-div,
+.about-btn:hover .about-btn-span{
+    background-color: var(--asphalt);
+    color: #fff;
+}
+.about-btn:hover .about-btn-div img{
+    filter: invert(1);
+}
+/* hover to buttons */
 
 
 /* portfolio */
@@ -371,11 +435,33 @@ body.active{
 
     cursor: pointer;
 }
+.portfolio-item:hover .portfolio-item-overlay{
+    opacity: 0.8;
+}
+.portfolio-item:hover .portfolio-text-title,
+.portfolio-item:hover .portfolio-text-name{
+    opacity: 1;
+    transform: translateY(0);
+}
+.portfolio-item:hover .portfolio-text-name{
+    transition-delay: 300ms;
+}
 .portfolio-item.short{
     grid-row: span 1;
 }
 .portfolio-item.long{
     grid-row: span 2;
+}
+.portfolio-item-overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: #000;
+
+    transition: opacity .35s;
+    opacity: 0;
 }
 .portfolio-item-image{
     position: absolute;
@@ -395,6 +481,15 @@ body.active{
 .portfolio-text-title{
     font-size: 1.7em;
     font-weight: 600;  
+}
+.portfolio-text-title,
+.portfolio-text-name{
+    transition: opacity .35s, transform .25s ease-in;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.portfolio-text-name{
+    transform: translateY(10px);
 }
 /* service */
 .service{
@@ -502,6 +597,8 @@ body.active{
     width: 33%;
 
     gap: 15px 0px;
+
+    cursor: pointer;
 }
 
 .blog-item-descr{
@@ -595,6 +692,8 @@ body.active{
     font-weight: 700;
     font-size: 0.8em;
     text-transform: uppercase;
+
+    cursor: pointer;
 }
 .socials{
     display: flex;
@@ -606,6 +705,8 @@ body.active{
     height: 16px;
     display: flex;
     align-items: center;
+
+    cursor: pointer;
 }
 .social-icon img{
     max-width: 100%;
@@ -641,6 +742,9 @@ body.active{
     }
     .partner{
         width: 33%;
+    }
+    .portfolio-text-title{
+        font-size: 1.3em;
     }
 }
 @media (max-width: 920px) {
